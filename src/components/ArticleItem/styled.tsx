@@ -10,18 +10,18 @@ const ArticleItemStyled = styled.li`
     max-height: 125px;
 `;
 
-const ArticleImgBox = styled.div`
+const ArticleImgBoxStyled = styled.div`
     width: 240px;
 `;
 
-const ArticleImg = styled.img`
+const ArticleImgStyled = styled.img`
     width: 100%;
     border-radius: 4px;
     overflow: hidden;
     pointer-events: none;
 `;
 
-const ArticleDescriptionBox = styled.div`
+const ArticleDescriptionBoxStyled = styled.div`
     margin-left: 16px;
     display: flex;
     max-width: 680px;
@@ -30,7 +30,7 @@ const ArticleDescriptionBox = styled.div`
     justify-content: space-between;
 `;
 
-const ArticleTitle = styled.h3`
+const ArticleTitleStyled = styled.h3`
     padding: 0;
     margin: 0;
     font-size: 24px;
@@ -42,7 +42,7 @@ const ArticleTitle = styled.h3`
     font-weight: 500;
 `;
 
-const ArticleDescription = styled.p`
+const ArticleDescriptionStyled = styled.p`
     padding: 0;
     margin: 0;
     line-height: 20px;
@@ -57,14 +57,14 @@ const ArticleDescription = styled.p`
     margin-bottom: 10px;
 `;
 
-const ArticleIco = styled.img`
+const ArticleIcoStyled = styled.img`
     width: 16px;
     height: 16px;
     border-radius: 2px;
     margin-right: 8px;
 `;
 
-const ArticleDate = styled.p`
+const ArticleDateStyled = styled.p`
     font-size: 14px;
     color: rgb(128, 128, 128);
     line-height: 0;
@@ -79,11 +79,11 @@ const ArticleDate = styled.p`
 
 export {
     ArticleItemStyled,
-    ArticleImg,
-    ArticleImgBox,
-    ArticleTitle,
-    ArticleDescription,
-    ArticleDate,
-    ArticleDescriptionBox,
-    ArticleIco
+    ArticleImgStyled,
+    ArticleImgBoxStyled,
+    ArticleTitleStyled,
+    ArticleDescriptionStyled,
+    ArticleDateStyled,
+    ArticleDescriptionBoxStyled,
+    ArticleIcoStyled,
 }

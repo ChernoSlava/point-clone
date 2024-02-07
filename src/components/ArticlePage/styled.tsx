@@ -7,7 +7,7 @@ const ArticlePageStyled = styled.div`
     border-radius: 8px;
 `;
 
-const ArticleTitle = styled.h2`
+const ArticleTitleStyled = styled.h2`
     padding: 0;
     margin: 0;
     color: rgb(15, 23, 42);
@@ -19,7 +19,7 @@ const ArticleTitle = styled.h2`
     text-align: center;
 `;
 
-const ArticleDescription = styled.p`
+const ArticleDescriptionStyled = styled.p`
     padding: 0;
     margin: 0;
     color: rgb(15, 23, 42);
@@ -30,12 +30,12 @@ const ArticleDescription = styled.p`
     margin-bottom: 24px;
     line-height: 28px;
 `;
-const ArticleImage = styled.img`
+const ArticleImageStyled = styled.img`
     max-width: 100%;
     border-radius: 10px;
 `;
 
-const ArticleBlot = styled.p`
+const ArticleBlotStyled = styled.p`
     padding: 0;
     margin: 0;
     margin: 20px 0;
@@ -43,8 +43,8 @@ const ArticleBlot = styled.p`
 
 export {
     ArticlePageStyled,
-    ArticleTitle,
-    ArticleDescription,
-    ArticleImage,
-    ArticleBlot,
+    ArticleTitleStyled,
+    ArticleDescriptionStyled,
+    ArticleImageStyled,
+    ArticleBlotStyled,
 }
