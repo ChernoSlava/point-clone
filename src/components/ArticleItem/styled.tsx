@@ -3,6 +3,9 @@ import styled from 'styled-components';
 const ArticleItemStyled = styled.li`
     
 `;
+const ArticleImgBox = styled.div`
+    
+`;
 
 const ArticleImg = styled.img`
     
@@ -22,6 +25,7 @@ const ArticleDate = styled.p`
 export {
     ArticleItemStyled,
     ArticleImg,
+    ArticleImgBox,
     ArticleTitle,
     ArticleDescription,
     ArticleDate
