@@ -5,6 +5,8 @@ const ArticlePageStyled = styled.div`
     max-width: 984px;
     padding: 24px;
     border-radius: 8px;
+    display: flex;
+    flex-direction: column;
 `;
 
 const ArticleTitleStyled = styled.h2`

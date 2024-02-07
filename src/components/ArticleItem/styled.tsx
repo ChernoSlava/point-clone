@@ -12,6 +12,7 @@ const ArticleItemStyled = styled.li`
 
 const ArticleImgBoxStyled = styled.div`
     width: 240px;
+    min-width: 240px
 `;
 
 const ArticleImgStyled = styled.img`

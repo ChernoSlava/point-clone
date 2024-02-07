@@ -1,22 +1,20 @@
 import React from 'react';
-import { ApolloProvider } from '@apollo/client';
+import { Route, Routes } from 'react-router-dom';
 import client from './client';
+import { ApolloProvider } from '@apollo/client';
+
 import { ArticleListContainer, ArticlePageContainer } from './containers';
-import {  Route, Routes, Link } from 'react-router-dom';
-import { AppStyled, MainLogoStyled } from './styled';
+import { AppLayout } from './components';
 
 function App() {
   return (
     <ApolloProvider client={client}>
-      <AppStyled>
-        <Link to="/">
-          <MainLogoStyled src='https://point.md/static/svg/new-point-logo.svg' alt='Point logo' />
-        </Link>
+      <AppLayout>
         <Routes>
             <Route path="/" element={<ArticleListContainer />} /> 
             <Route  path="/article/:slag" element={<ArticlePageContainer />} />
         </Routes>
-      </AppStyled>
+      </AppLayout>
     </ApolloProvider>
   );
 }
