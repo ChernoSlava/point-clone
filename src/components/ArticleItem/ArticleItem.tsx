@@ -1,12 +1,13 @@
 import React from 'react';
 import { 
   ArticleItemStyled,
-  ArticleImg,
-  ArticleImgBox,
-  ArticleTitle,
-  ArticleDescription,
-  ArticleDate,
-  ArticleDescriptionBox
+  ArticleImgStyled,
+  ArticleImgBoxStyled,
+  ArticleTitleStyled,
+  ArticleDescriptionStyled,
+  ArticleDateStyled,
+  ArticleDescriptionBoxStyled,
+  ArticleIcoStyled,
 } from './styled';
 
 interface IArticleItemProps {
@@ -15,19 +16,23 @@ interface IArticleItemProps {
   title: string;
   description: string;
   date: string;
+  image: string;
 }
 
 const ArticleItem: React.FC<IArticleItemProps> = ({ id, thumbnail, title, description, date }) => {
   return (
     <ArticleItemStyled key={id}>
-      <ArticleImgBox>
-        <ArticleImg src={thumbnail} alt='Cartoon' />
-      </ArticleImgBox>
-      <ArticleDescriptionBox>
-        <ArticleTitle>{title}</ArticleTitle>
-        <ArticleDescription>{description}</ArticleDescription>
-        <ArticleDate>Posted: {date}</ArticleDate>
-      </ArticleDescriptionBox>
+      <ArticleImgBoxStyled>
+        <ArticleImgStyled src={thumbnail} alt='Cartoon' />
+      </ArticleImgBoxStyled>
+      <ArticleDescriptionBoxStyled>
+        <ArticleTitleStyled>{title}</ArticleTitleStyled>
+        <ArticleDescriptionStyled>{description}</ArticleDescriptionStyled>
+        <ArticleDateStyled>
+          <ArticleIcoStyled src={thumbnail} alt="icon" />
+          {date}
+        </ArticleDateStyled>
+      </ArticleDescriptionBoxStyled>
     </ArticleItemStyled>
   );
 };

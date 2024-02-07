@@ -9,17 +9,17 @@ const ArticleListStyled = styled.div`
     background-color: rgb(255, 255, 255);
 `;
 
-const ArticleDateHeading = styled.h2`
+const ArticleDateHeadingStyled = styled.h2`
     padding: 0;
     margin: 0;
 `;
 
-const ArticleList = styled.ul`
+const ListStyled = styled.ul`
  padding: 0;
 `;
 
 export {
     ArticleListStyled,
-    ArticleDateHeading,
-    ArticleList,
+    ArticleDateHeadingStyled,
+    ListStyled,
 }

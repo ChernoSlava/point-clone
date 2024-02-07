@@ -12,6 +12,8 @@ export const AppStyled = styled.div`
   background: #F5F5F5;
 `;
 
-export const MainLogo = styled.img`
-  
+export const MainLogoStyled = styled.img`
+  margin: 45px 0;
+  width: 170px;
+  height: 48px 
 `;

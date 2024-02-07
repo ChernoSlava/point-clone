@@ -9,18 +9,19 @@ const ArticleItemStyled = styled.li`
     margin-bottom: 24px;
     max-height: 125px;
 `;
-const ArticleImgBox = styled.div`
+
+const ArticleImgBoxStyled = styled.div`
     width: 240px;
 `;
 
-const ArticleImg = styled.img`
+const ArticleImgStyled = styled.img`
     width: 100%;
     border-radius: 4px;
     overflow: hidden;
     pointer-events: none;
 `;
 
-const ArticleDescriptionBox = styled.div`
+const ArticleDescriptionBoxStyled = styled.div`
     margin-left: 16px;
     display: flex;
     max-width: 680px;
@@ -29,7 +30,7 @@ const ArticleDescriptionBox = styled.div`
     justify-content: space-between;
 `;
 
-const ArticleTitle = styled.h3`
+const ArticleTitleStyled = styled.h3`
     padding: 0;
     margin: 0;
     font-size: 24px;
@@ -41,8 +42,8 @@ const ArticleTitle = styled.h3`
     font-weight: 500;
 `;
 
-const ArticleDescription = styled.p`
-padding: 0;
+const ArticleDescriptionStyled = styled.p`
+    padding: 0;
     margin: 0;
     line-height: 20px;
     font-size: 16px;
@@ -53,14 +54,24 @@ padding: 0;
     overflow: hidden;
     text-overflow: ellipsis;
     -webkit-line-clamp: 2;
-
+    margin-bottom: 10px;
 `;
 
-const ArticleDate = styled.p`
+const ArticleIcoStyled = styled.img`
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+    margin-right: 8px;
+`;
+
+const ArticleDateStyled = styled.p`
     font-size: 14px;
     color: rgb(128, 128, 128);
     line-height: 0;
     width: max-content;
+    margin: 0;
+    display: flex;
+    align-items: center;
 `;
 
 
@@ -68,10 +79,11 @@ const ArticleDate = styled.p`
 
 export {
     ArticleItemStyled,
-    ArticleImg,
-    ArticleImgBox,
-    ArticleTitle,
-    ArticleDescription,
-    ArticleDate,
-    ArticleDescriptionBox
+    ArticleImgStyled,
+    ArticleImgBoxStyled,
+    ArticleTitleStyled,
+    ArticleDescriptionStyled,
+    ArticleDateStyled,
+    ArticleDescriptionBoxStyled,
+    ArticleIcoStyled,
 }
