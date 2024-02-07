@@ -42,3 +42,19 @@ function formatDays(seconds: number) {
         return `${days} дней назад`;
     }
 }
+
+export const generateSlug = (title: string) => {
+    const translitMap: { [key: string]: string } = {
+        а: 'a', б: 'b', в: 'v', г: 'g', д: 'd', е: 'e', ё: 'yo', ж: 'zh',
+        з: 'z', и: 'i', й: 'j', к: 'k', л: 'l', м: 'm', н: 'n', о: 'o',
+        п: 'p', р: 'r', с: 's', т: 't', у: 'u', ф: 'f', х: 'h', ц: 'c',
+        ч: 'ch', ш: 'sh', щ: 'shh', ы: 'y', э: 'e', ю: 'yu', я: 'ya',
+        ' ': '-'
+    };
+    
+    return title
+    .toLowerCase()
+    .replace(/[а-яё]/g, char => translitMap[char] || char)
+    .replace(/[^a-z0-9-]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+};
