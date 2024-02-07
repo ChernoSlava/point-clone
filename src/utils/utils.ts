@@ -58,3 +58,7 @@ export const generateSlug = (title: string) => {
     .replace(/[^a-z0-9-]+/g, '-')
     .replace(/^-+|-+$/g, '');
 };
+
+export const removeHtmlEntities = (text: string) => {
+    return text.replace(/&#34;/g, '"');
+};

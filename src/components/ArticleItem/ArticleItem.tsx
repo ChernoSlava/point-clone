@@ -6,7 +6,8 @@ import {
   ArticleTitle,
   ArticleDescription,
   ArticleDate,
-  ArticleDescriptionBox
+  ArticleDescriptionBox,
+  ArticleIco
 } from './styled';
 
 interface IArticleItemProps {
@@ -15,6 +16,7 @@ interface IArticleItemProps {
   title: string;
   description: string;
   date: string;
+  image: string;
 }
 
 const ArticleItem: React.FC<IArticleItemProps> = ({ id, thumbnail, title, description, date }) => {
@@ -26,7 +28,10 @@ const ArticleItem: React.FC<IArticleItemProps> = ({ id, thumbnail, title, descri
       <ArticleDescriptionBox>
         <ArticleTitle>{title}</ArticleTitle>
         <ArticleDescription>{description}</ArticleDescription>
-        <ArticleDate>Posted: {date}</ArticleDate>
+        <ArticleDate>
+          <ArticleIco src={thumbnail} alt="icon" />
+          {date}
+        </ArticleDate>
       </ArticleDescriptionBox>
     </ArticleItemStyled>
   );

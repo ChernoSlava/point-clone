@@ -13,5 +13,7 @@ export const AppStyled = styled.div`
 `;
 
 export const MainLogo = styled.img`
-  
+  margin: 45px 0;
+  width: 170px;
+  height: 48px 
 `;

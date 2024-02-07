@@ -19,7 +19,7 @@ const ArticleList: React.FC<IArticleList> = ({ articles }) => {
           <Link 
             key={article.id} 
             to={article.url} 
-            state={{ articleTitle: article.title }}
+            state={{ articleTitle: article.title, image: article.image, description: article.description }}
             >
             <ArticleItem { ...article } />
           </Link>

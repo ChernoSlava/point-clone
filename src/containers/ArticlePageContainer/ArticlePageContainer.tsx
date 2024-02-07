@@ -4,10 +4,10 @@ import { ArticlePage } from '../../components/ArticlePage';
 
 const ArticlePageContainer: React.FC = () => {
   const location = useLocation();
-  const articleTitle = location.state.articleTitle;
+  const {articleTitle, image, description} = location.state;
 
   return (
-    <ArticlePage title={articleTitle} />
+    <ArticlePage title={articleTitle} image={image} description={description}/>
   );
 };
 

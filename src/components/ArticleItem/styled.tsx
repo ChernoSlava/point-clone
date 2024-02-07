@@ -9,6 +9,7 @@ const ArticleItemStyled = styled.li`
     margin-bottom: 24px;
     max-height: 125px;
 `;
+
 const ArticleImgBox = styled.div`
     width: 240px;
 `;
@@ -42,7 +43,7 @@ const ArticleTitle = styled.h3`
 `;
 
 const ArticleDescription = styled.p`
-padding: 0;
+    padding: 0;
     margin: 0;
     line-height: 20px;
     font-size: 16px;
@@ -53,7 +54,14 @@ padding: 0;
     overflow: hidden;
     text-overflow: ellipsis;
     -webkit-line-clamp: 2;
+    margin-bottom: 10px;
+`;
 
+const ArticleIco = styled.img`
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+    margin-right: 8px;
 `;
 
 const ArticleDate = styled.p`
@@ -61,6 +69,9 @@ const ArticleDate = styled.p`
     color: rgb(128, 128, 128);
     line-height: 0;
     width: max-content;
+    margin: 0;
+    display: flex;
+    align-items: center;
 `;
 
 
@@ -73,5 +84,6 @@ export {
     ArticleTitle,
     ArticleDescription,
     ArticleDate,
-    ArticleDescriptionBox
+    ArticleDescriptionBox,
+    ArticleIco
 }
