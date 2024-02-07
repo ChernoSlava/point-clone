@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useQuery } from '@apollo/client';
 import { ARTICLES_QUERY } from '../utils';
-import { Article } from '../types';
+import { ArticleDto } from '../types';
 import { debounce } from 'lodash';
 
 export const useArticleList = () => {
@@ -10,7 +10,7 @@ export const useArticleList = () => {
     fetchPolicy: 'cache-and-network',
   });
 
-  const [articles, setArticles] = useState<Article[]>([]);
+  const [articles, setArticles] = useState<ArticleDto[]>([]);
   const [loadingMore, setLoadingMore] = useState<boolean>(false);
 
   useEffect(() => {
@@ -20,7 +20,7 @@ export const useArticleList = () => {
   }, [loading, data]);
 
   const loadMore = async () => {
-    if (loadingMore) return; // Предотвращаем дублирование запросов
+    if (loadingMore) return;
     try {
       setLoadingMore(true);
       const result = await fetchMore({

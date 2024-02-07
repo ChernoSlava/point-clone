@@ -22,14 +22,3 @@ export const ARTICLES_QUERY = gql`
     }
   }
 `;
-
-export const ARTICLE_QUERY_BY_FULL_URL = gql`
-  query ArticleByFullUrl($fullUrl: String!) {
-    content(full_url: $fullUrl) {
-      id
-      title {
-        short
-      }
-    }
-  }
-`;

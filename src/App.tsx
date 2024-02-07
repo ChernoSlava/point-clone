@@ -1,10 +1,9 @@
 import React from 'react';
 import { ApolloProvider } from '@apollo/client';
 import client from './client';
-import { ArticleListContainer } from './containers';
+import { ArticleListContainer, ArticlePageContainer } from './containers';
 import {  Route, Routes } from 'react-router-dom';
 import { AppStyled, MainLogo } from './styled';
-import { ArticlePage } from './components/ArticlePage';
 
 function App() {
   return (
@@ -13,7 +12,7 @@ function App() {
         <MainLogo src='./logo.png' alt='Point logo' />
         <Routes>
             <Route path="/" element={<ArticleListContainer />} /> 
-            <Route  path="/article/:slag" element={<ArticlePage />} />
+            <Route  path="/article/:slag" element={<ArticlePageContainer />} />
         </Routes>
       </AppStyled>
     </ApolloProvider>

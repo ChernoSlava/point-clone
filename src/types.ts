@@ -1,4 +1,4 @@
-interface Article {
+interface ArticleDto {
     id: string;
     title: {
       short: string;
@@ -12,4 +12,4 @@ interface Article {
     }
 }
 
-export type {Article};
+export type { ArticleDto };

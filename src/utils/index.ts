@@ -1,2 +1,2 @@
-export { ARTICLES_QUERY, ARTICLE_QUERY_BY_FULL_URL } from './query';
+export { ARTICLES_QUERY } from './query';
 export { formatTimeSincePublication, generateSlug } from './utils';
