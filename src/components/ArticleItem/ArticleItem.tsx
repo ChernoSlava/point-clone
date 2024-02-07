@@ -3,10 +3,12 @@ import { Article } from '../../types';
 import { 
   ArticleItemStyled,
   ArticleImg,
+  ArticleImgBox,
   ArticleTitle,
   ArticleDescription,
   ArticleDate
 } from './styled';
+import { formatTimeSincePublication } from '../../utils';
 
 interface Props {
   article: Article;
@@ -15,12 +17,12 @@ interface Props {
 const ArticleItem: React.FC<Props> = ({ article }) => {
   return (
     <ArticleItemStyled key={article.id}>
-      <div>
-        <ArticleImg src={article.thumbnail} alt='' />
-      </div>
+      <ArticleImgBox>
+        <ArticleImg src={article.thumbnail} alt='Cartoon' />
+      </ArticleImgBox>
       <ArticleTitle>{article.title.short}</ArticleTitle>
       <ArticleDescription>{article.description.intro}</ArticleDescription>
-      <ArticleDate>Posted: {article.dates.posted}</ArticleDate>
+      <ArticleDate>Posted: {formatTimeSincePublication(article.dates.posted)}</ArticleDate>
     </ArticleItemStyled>
   );
 };

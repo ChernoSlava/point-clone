@@ -8,6 +8,7 @@ interface Props {
 }
 
 const ArticleList: React.FC<Props> = ({ articles }) => {
+  
   return (
     <ArticleListStyled>
       <ArticleDateHeading>Сегодня</ArticleDateHeading>
