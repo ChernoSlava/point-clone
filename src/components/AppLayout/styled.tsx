@@ -10,6 +10,7 @@ export const AppStyled = styled.div`
   padding: 20px;
   margin: 0 auto;
   background: #F5F5F5;
+  background-color: rgb(255, 255, 255);
 `;
 
 export const MainLogoStyled = styled.img`
