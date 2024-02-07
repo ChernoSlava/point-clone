@@ -9,8 +9,7 @@ export const AppStyled = styled.div`
   height: 100%;
   padding: 20px;
   margin: 0 auto;
-  background: #F5F5F5;
-  background-color: rgb(255, 255, 255);
+  background-color: #F5F5F5;
 `;
 
 export const MainLogoStyled = styled.img`
