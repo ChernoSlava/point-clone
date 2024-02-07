@@ -1,27 +1,27 @@
 import React from 'react';
-import { Article } from '../../types';
-import { ArticleItem } from '../ArticleItem/ArticleItem';
+import { ArticleItem } from '../ArticleItem';
 import { ArticleDateHeading, ArticleListStyled, ArticleList as List } from './styled';
 import { Link } from 'react-router-dom';
-import { generateSlug } from '../../utils';
+import { IArticleItemProps } from '../ArticleItem';
 
-interface Props {
-  articles: Article[];
+
+interface IArticleList {
+  articles: (IArticleItemProps & {url: string})[];
 }
 
-const ArticleList: React.FC<Props> = ({ articles }) => {
+const ArticleList: React.FC<IArticleList> = ({ articles }) => {
   
   return (
     <ArticleListStyled>
       <ArticleDateHeading>Сегодня</ArticleDateHeading>
       <List>
-        {articles.map((article: Article) => (
+        {articles.map((article) => (
           <Link 
             key={article.id} 
-            to={`/article/${generateSlug(article.title.short)}`} 
-            state={{ articleTitle: article.title.short }}
+            to={article.url} 
+            state={{ articleTitle: article.title }}
             >
-            <ArticleItem article={article} />
+            <ArticleItem { ...article } />
           </Link>
         ))}
       </List>
