@@ -5,9 +5,11 @@ import { ArticleDateHeading, ArticleListStyled, ArticleList as List } from './st
 
 interface Props {
   articles: Article[];
+  loadMore: () => Promise<void>;
 }
 
-const ArticleList: React.FC<Props> = ({ articles }) => {
+const ArticleList: React.FC<Props> = ({ articles, loadMore }) => {
+  
   return (
     <ArticleListStyled>
       <ArticleDateHeading>Сегодня</ArticleDateHeading>
@@ -16,6 +18,7 @@ const ArticleList: React.FC<Props> = ({ articles }) => {
            <ArticleItem key={article.id} article={article} />      
         ))}
       </List>
+      <button onClick={loadMore}>Load More</button>
     </ArticleListStyled>
   );
 };
