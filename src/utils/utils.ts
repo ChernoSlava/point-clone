@@ -1,34 +1,35 @@
+function formatTimeUnit(
+  value: number,
+  unit: string,
+  suffixes: string[],
+  ending = "назад"
+) {
+  const lastDigit = value % 10;
+
+  if (lastDigit === 1) {
+    return `${value} ${unit}${suffixes[0]} ${ending}`;
+  }
+
+  if (lastDigit >= 2 && lastDigit <= 4) {
+    return `${value} ${unit}${suffixes[1]} ${ending}`;
+  }
+
+  return `${value} ${unit}${suffixes[2]} ${ending}`;
+}
+
 export function formatMinutes(seconds: number) {
   const minutes = Math.floor(seconds / 60);
-  if (minutes === 1) {
-    return "1 минуту назад";
-  }
-  if (minutes > 1 && minutes < 5) {
-    return `${minutes} минуты назад`;
-  }
-  return `${minutes} минут назад`;
+  return formatTimeUnit(minutes, "минут", ["у", "ы", ""]);
 }
 
 export function formatHours(seconds: number) {
   const hours = Math.floor(seconds / 3600);
-  if (hours === 1) {
-    return "1 час назад";
-  }
-  if (hours > 1 && hours < 5) {
-    return `${hours} часа назад`;
-  }
-  return `${hours} часов назад`;
+  return formatTimeUnit(hours, "час", ["", "а", "ов"]);
 }
 
 export function formatDays(seconds: number) {
   const days = Math.floor(seconds / 86400);
-  if (days === 1) {
-    return "1 день назад";
-  }
-  if (days > 1 && days < 5) {
-    return `${days} дня назад`;
-  }
-  return `${days} дней назад`;
+  return formatTimeUnit(days, "д", ["ень", "ня", "ней"]);
 }
 
 export function formatTimeSincePublication(seconds: string) {
