@@ -1,0 +1,19 @@
+{
+    "source": {
+      "include": ["src"], 
+      "exclude": ["node_modules", "dist"]
+    },
+    "opts": {
+      "destination": "docs/",
+      "recurse": true
+    },
+    "plugins": [],
+    "templates": {
+      "cleverLinks": false,
+      "monospaceLinks": false
+    },
+    "tags": {
+      "allowUnknownTags": true
+    }
+}
+  
