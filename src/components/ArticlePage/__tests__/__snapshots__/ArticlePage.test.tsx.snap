@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArticlePage tests renders BackButton 1`] = `
+<div>
+  <div
+    class="sc-beySPh dWkjbF"
+  >
+    <h2
+      class="sc-guDLey cygvQJ"
+    >
+      Test Title
+    </h2>
+    <p
+      class="sc-dmyCSP dHLvlV"
+    >
+      Test Description
+    </p>
+    <img
+      alt="Big ico"
+      class="sc-hLQSwg bcGlma"
+      src="test-image.jpg"
+    />
+    <p
+      class="sc-eDLKkx flLHu"
+    >
+      Шикарные новости для вас :D
+    </p>
+    <a
+      href="/"
+      style="text-decoration: none; color: blue;"
+    >
+      Назад
+    </a>
+  </div>
+</div>
+`;
+
+exports[`ArticlePage tests renders with correct title, image, and description 1`] = `
+<div>
+  <div
+    class="sc-beySPh dWkjbF"
+  >
+    <h2
+      class="sc-guDLey cygvQJ"
+    >
+      Test Title
+    </h2>
+    <p
+      class="sc-dmyCSP dHLvlV"
+    >
+      Test Description
+    </p>
+    <img
+      alt="Big ico"
+      class="sc-hLQSwg bcGlma"
+      src="test-image.jpg"
+    />
+    <p
+      class="sc-eDLKkx flLHu"
+    >
+      Шикарные новости для вас :D
+    </p>
+    <a
+      href="/"
+      style="text-decoration: none; color: blue;"
+    >
+      Назад
+    </a>
+  </div>
+</div>
+`;

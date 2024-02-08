@@ -1,9 +1,6 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
-/* eslint-disable testing-library/prefer-screen-queries */
 import React from "react";
 import { MemoryRouter, Route, Routes } from "react-router-dom";
-// eslint-disable-next-line import/no-extraneous-dependencies
-import { cleanup, render } from "@testing-library/react";
+import { cleanup, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
 import { BackButton } from "../BackButton";
@@ -24,7 +21,7 @@ describe("BackButton tests", () => {
   });
 
   test("should click and go to /foo", () => {
-    const { container, unmount, getByText } = render(
+    const { container, unmount } = render(
       <MemoryRouter>
         <BackButton to="/foo" />
         <Routes>
@@ -35,11 +32,10 @@ describe("BackButton tests", () => {
     );
 
     expect(container).toMatchSnapshot();
-    const button = getByText("Назад");
+    const button = screen.getByText("Назад");
 
     userEvent.click(button);
-    // @ts-ignore
-    expect(getByText("Test foo")).toBeInTheDocument();
+    expect(screen.getByText("Test foo")).toBeTruthy();
     expect(container).toMatchSnapshot();
     unmount();
   });
