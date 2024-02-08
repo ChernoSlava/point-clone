@@ -1,14 +1,15 @@
-import React from 'react';
-import { 
-  ArticleItemStyled,
-  ArticleImgStyled,
-  ArticleImgBoxStyled,
-  ArticleTitleStyled,
-  ArticleDescriptionStyled,
+import React from "react";
+
+import {
   ArticleDateStyled,
   ArticleDescriptionBoxStyled,
+  ArticleDescriptionStyled,
   ArticleIcoStyled,
-} from './styled';
+  ArticleImgBoxStyled,
+  ArticleImgStyled,
+  ArticleItemStyled,
+  ArticleTitleStyled,
+} from "./styled";
 
 interface IArticleItemProps {
   id: string;
@@ -19,11 +20,17 @@ interface IArticleItemProps {
   image: string;
 }
 
-const ArticleItem: React.FC<IArticleItemProps> = ({ id, thumbnail, title, description, date }) => {
+const ArticleItem: React.FC<IArticleItemProps> = ({
+  id,
+  thumbnail,
+  title,
+  description,
+  date,
+}) => {
   return (
     <ArticleItemStyled key={id}>
       <ArticleImgBoxStyled>
-        <ArticleImgStyled src={thumbnail} alt='Cartoon' />
+        <ArticleImgStyled src={thumbnail} alt="Cartoon" />
       </ArticleImgBoxStyled>
       <ArticleDescriptionBoxStyled>
         <ArticleTitleStyled>{title}</ArticleTitleStyled>
@@ -37,6 +44,5 @@ const ArticleItem: React.FC<IArticleItemProps> = ({ id, thumbnail, title, descri
   );
 };
 
-export { ArticleItem };  
+export { ArticleItem };
 export type { IArticleItemProps };
-

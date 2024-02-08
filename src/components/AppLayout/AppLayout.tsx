@@ -1,25 +1,23 @@
-import React from 'react';
-import { Outlet, Link } from 'react-router-dom';
+import React from "react";
+import { Link, Outlet } from "react-router-dom";
+import { LOGO_URL } from "@constants/index";
 
-import { AppStyled, MainLogoStyled } from './styled';
-import { LOGO_URL } from '@constants/index';
+import { AppStyled, MainLogoStyled } from "./styled";
 
-
-export const AppLayout: React.FC<{
+const AppLayout: React.FC<{
   children: React.ReactElement | null;
-}> = ({ children }): JSX.Element => {
-  
+}> = ({ children }): React.JSX.Element => {
   const logoLink = process.env.REACT_APP_LOGO_LINK || LOGO_URL;
 
   return (
-    <>
-      <AppStyled>
-        <Link to="/">
-          <MainLogoStyled src={logoLink} alt='Point logo' />
-        </Link>
-        <Outlet />
-        {children}
-      </AppStyled>
-    </>
+    <AppStyled>
+      <Link to="/">
+        <MainLogoStyled src={logoLink} alt="Point logo" />
+      </Link>
+      <Outlet />
+      {children}
+    </AppStyled>
   );
 };
+
+export { AppLayout };

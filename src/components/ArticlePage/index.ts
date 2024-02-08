@@ -1,1 +1,1 @@
-export { ArticlePage } from './ArticlePage';
+export { ArticlePage } from "./ArticlePage";

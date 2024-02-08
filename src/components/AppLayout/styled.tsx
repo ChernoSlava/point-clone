@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const AppStyled = styled.div`
   display: flex;
@@ -9,11 +9,11 @@ export const AppStyled = styled.div`
   height: 100%;
   padding: 20px;
   margin: 0 auto;
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
 `;
 
 export const MainLogoStyled = styled.img`
   margin: 45px 0;
   width: 170px;
-  height: 48px 
+  height: 48px;
 `;

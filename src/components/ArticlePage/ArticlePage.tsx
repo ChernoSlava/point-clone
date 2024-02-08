@@ -1,19 +1,20 @@
-import React from 'react';
-import { BackButton } from '../BackButton';
+import React from "react";
 
-import { 
-  ArticlePageStyled,
-  ArticleTitleStyled,
+import { BackButton } from "../BackButton";
+
+import {
+  ArticleBlotStyled,
   ArticleDescriptionStyled,
   ArticleImageStyled,
-  ArticleBlotStyled, 
-} from './styled';
+  ArticlePageStyled,
+  ArticleTitleStyled,
+} from "./styled";
 
-
-const ArticlePage: React.FC<{title:string, image: string, description: string}> = ({
-  title, image, description
-}) => {
-
+const ArticlePage: React.FC<{
+  title: string;
+  image: string;
+  description: string;
+}> = ({ title, image, description }) => {
   return (
     <ArticlePageStyled>
       <ArticleTitleStyled>{title}</ArticleTitleStyled>
