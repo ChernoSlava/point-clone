@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArticleItem tests renders with correct title, image, and description 1`] = `
+<div>
+  <li
+    class="sc-beySPh jOqDaV"
+  >
+    <div
+      class="sc-guDLey cdWRpq"
+    >
+      <img
+        alt="Cartoon"
+        class="sc-dmyCSP gfsvpd"
+        src="test-thumbnail.jpg"
+      />
+    </div>
+    <div
+      class="sc-hLQSwg ezfliH"
+    >
+      <h3
+        class="sc-eDLKkx bCcaMp"
+      >
+        Test Title
+      </h3>
+      <p
+        class="sc-jTQCzO gawhwJ"
+      >
+        Test Description
+      </p>
+      <p
+        class="sc-iBdnpw giGobE"
+      >
+        <img
+          alt="icon"
+          class="sc-gLLuof gNHDaF"
+          src="test-thumbnail.jpg"
+        />
+        2 дня назад
+      </p>
+    </div>
+  </li>
+</div>
+`;

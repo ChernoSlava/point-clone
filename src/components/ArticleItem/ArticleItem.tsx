@@ -17,7 +17,7 @@ interface IArticleItemProps {
   title: string;
   description: string;
   date: string;
-  image: string;
+  image?: string;
 }
 
 const ArticleItem: React.FC<IArticleItemProps> = ({
