@@ -11,7 +11,9 @@
 - Styled Components,
 - ESLint,
 - TypeScript,
-- Apolo and Graphql;
+- Apolo and Graphql,
+- Alias,
+- Webpack customization.
 
 ---
 
