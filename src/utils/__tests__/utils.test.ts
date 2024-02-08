@@ -1,4 +1,4 @@
-import { formatTimeSincePublication, generateSlug } from "./utils";
+import { formatTimeSincePublication, generateSlug } from "../utils";
 
 describe("formatTimeSincePublication", () => {
   it("returns 'только что' for time less than 60 seconds", () => {

@@ -23,7 +23,7 @@ const config = {
   // resetMocks: true,
 
   // Добавление путей к файлам с настройками перед запуском тестов
-  // setupFilesAfterEnv: ['./jest.setup.js'],
+  setupFilesAfterEnv: ["./setupTests.ts"],
 
   // Добавление путей к глобальным setup-файлам
   // globalSetup: './jest.globalSetup.js',
