@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArticleList tests renders article list correctly 1`] = `
+<div>
+  <div
+    class="sc-fsYfdN fGPEJW"
+  >
+    <h2
+      class="sc-qZrbh dvdZjT"
+    >
+      Сегодня
+    </h2>
+    <ul
+      class="sc-jsEeTM jidTqx"
+    >
+      <a
+        href="/article-1"
+      >
+        <li
+          class="sc-beySPh jOqDaV"
+        >
+          <div
+            class="sc-guDLey cdWRpq"
+          >
+            <img
+              alt="Cartoon"
+              class="sc-dmyCSP gfsvpd"
+              src="article-1.jpg"
+            />
+          </div>
+          <div
+            class="sc-hLQSwg ezfliH"
+          >
+            <h3
+              class="sc-eDLKkx bCcaMp"
+            >
+              Article 1
+            </h3>
+            <p
+              class="sc-jTQCzO gawhwJ"
+            >
+              Description for Article 1
+            </p>
+            <p
+              class="sc-iBdnpw giGobE"
+            >
+              <img
+                alt="icon"
+                class="sc-gLLuof gNHDaF"
+                src="article-1.jpg"
+              />
+              2 дня назад
+            </p>
+          </div>
+        </li>
+      </a>
+      <a
+        href="/article-2"
+      >
+        <li
+          class="sc-beySPh jOqDaV"
+        >
+          <div
+            class="sc-guDLey cdWRpq"
+          >
+            <img
+              alt="Cartoon"
+              class="sc-dmyCSP gfsvpd"
+              src="article-2.jpg"
+            />
+          </div>
+          <div
+            class="sc-hLQSwg ezfliH"
+          >
+            <h3
+              class="sc-eDLKkx bCcaMp"
+            >
+              Article 2
+            </h3>
+            <p
+              class="sc-jTQCzO gawhwJ"
+            >
+              Description for Article 2
+            </p>
+            <p
+              class="sc-iBdnpw giGobE"
+            >
+              <img
+                alt="icon"
+                class="sc-gLLuof gNHDaF"
+                src="article-2.jpg"
+              />
+              8 дней назад
+            </p>
+          </div>
+        </li>
+      </a>
+    </ul>
+  </div>
+</div>
+`;
