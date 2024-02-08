@@ -4,14 +4,14 @@
  * @param {number} value - The numerical value of the time unit.
  * @param {string} unit - The unit of time (e.g., "minute", "hour", "day").
  * @param {string[]} suffixes - An array of suffixes for different numerical endings.
- * @param {string} [ending="ago"] - The default ending for the formatted time unit.
+ * @param {string} [ending="назад"] - The default ending for the formatted time unit.
  * @returns {string} The formatted time unit.
  */
 function formatTimeUnit(
   value: number,
   unit: string,
   suffixes: string[],
-  ending = "ago"
+  ending = "назад"
 ) {
   const lastDigit = value % 10;
 
@@ -34,7 +34,7 @@ function formatTimeUnit(
  */
 export function formatMinutes(seconds: number) {
   const minutes = Math.floor(seconds / 60);
-  return formatTimeUnit(minutes, "minute", ["", "s", "s"]);
+  return formatTimeUnit(minutes, "минут", ["у", "ы", ""]);
 }
 
 /**
@@ -45,7 +45,7 @@ export function formatMinutes(seconds: number) {
  */
 export function formatHours(seconds: number) {
   const hours = Math.floor(seconds / 3600);
-  return formatTimeUnit(hours, "hour", ["", "s", "s"]);
+  return formatTimeUnit(hours, "час", ["", "а", "ов"]);
 }
 
 /**
@@ -56,7 +56,7 @@ export function formatHours(seconds: number) {
  */
 export function formatDays(seconds: number) {
   const days = Math.floor(seconds / 86400);
-  return formatTimeUnit(days, "day", ["", "s", "s"]);
+  return formatTimeUnit(days, "д", ["ень", "ня", "ней"]);
 }
 
 /**
@@ -73,7 +73,7 @@ export function formatTimeSincePublication(seconds: string) {
   const diffSeconds = Math.floor(diffMilliseconds / 1000);
 
   if (diffSeconds < 60) {
-    return "just now";
+    return "только что";
   }
   if (diffSeconds < 3600) {
     return formatMinutes(diffSeconds);
