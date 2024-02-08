@@ -1,8 +1,8 @@
 import React from 'react';
-import { ArticleList } from '../../components';
-import { useArticleList } from '../../hooks';
-import { formatTimeSincePublication, generateSlug, removeHtmlEntities } from '../../utils';
-import { NEWS_BIG_IMAGE_URL, NEWS_IMAGE_URL } from '../../constants';
+import { ArticleList } from '@components/index';
+import { useArticleList } from '@hooks/index';
+import { formatTimeSincePublication, generateSlug, removeHtmlEntities } from '@utils/index';
+import { NEWS_BIG_IMAGE_URL, NEWS_IMAGE_URL } from '@constants/index';
 
 
 const ArticleListContainer: React.FC = () => {

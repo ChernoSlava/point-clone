@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import { ArticlePage } from 'components';
+import { ArticlePage } from '@components/index';
 
 const ArticlePageContainer: React.FC = () => {
   const location = useLocation();
