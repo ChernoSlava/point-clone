@@ -4,13 +4,8 @@
   "private": true,
   "dependencies": {
     "@apollo/client": "^3.9.3",
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
     "@types/node": "^16.18.79",
-    "@types/react": "^18.2.55",
-    "@types/react-dom": "^18.2.18",
     "graphql": "^16.8.1",
     "lodash": "^4.17.21",
     "react": "^18.2.0",
@@ -19,18 +14,19 @@
     "react-scripts": "5.0.1",
     "styled-components": "^6.1.8",
     "typescript": "^4.9.5",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "@testing-library/jest-dom": "^6.4.2"
   },
   "scripts": {
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
-    "test": "react-app-rewired test",
     "eject": "react-scripts eject",
     "lint-staged": "lint-staged",
     "eslint": "npx eslint src",
     "eslint-fix": "npx eslint src --fix",
     "pre-commit": "lint-staged",
-    "postinstall": "husky install"
+    "postinstall": "husky install",
+    "test": "jest"
   },
   "eslintConfig": {
     "extends": [
@@ -51,9 +47,14 @@
     ]
   },
   "devDependencies": {
+    "@babel/preset-typescript": "^7.23.3",
     "@commitlint/cli": "16.0.2",
     "@commitlint/config-conventional": "16.0.0",
+    "@testing-library/react": "^14.2.1",
+    "@types/jest": "^29.5.12",
     "@types/lodash": "^4.14.202",
+    "@types/react": "^18.2.55",
+    "@types/react-dom": "^18.2.19",
     "customize-cra": "^1.0.0",
     "eslint": "^8.56.0",
     "eslint-config-airbnb": "^19.0.4",
@@ -70,7 +71,9 @@
     "lint-staged": "^15.2.2",
     "prettier": "2.8.3",
     "react-app-rewire-alias": "^1.1.7",
-    "react-app-rewired": "^2.2.1"
+    "react-app-rewired": "^2.2.1",
+    "ts-jest": "^29.1.2",
+    "jest-environment-jsdom": "^29.4.3"
   },
   "husky": {
     "hooks": {

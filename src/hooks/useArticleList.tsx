@@ -32,6 +32,7 @@ export const useArticleList = () => {
       const newArticles = result.data.contents;
       setArticles((prevArticles) => [...prevArticles, ...newArticles]);
     } catch (err) {
+      // eslint-disable-next-line no-console
       console.error("Error loading more articles:", err);
     } finally {
       setLoadingMore(false);
