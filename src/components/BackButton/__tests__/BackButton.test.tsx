@@ -24,7 +24,7 @@ describe("BackButton tests", () => {
   });
 
   test("should click and go to /foo", () => {
-    const { unmount, getByText } = render(
+    const { container, unmount, getByText } = render(
       <MemoryRouter>
         <BackButton to="/foo" />
         <Routes>
@@ -33,11 +33,14 @@ describe("BackButton tests", () => {
         </Routes>
       </MemoryRouter>
     );
+
+    expect(container).toMatchSnapshot();
     const button = getByText("Назад");
 
     userEvent.click(button);
     // @ts-ignore
     expect(getByText("Test foo")).toBeInTheDocument();
+    expect(container).toMatchSnapshot();
     unmount();
   });
 });

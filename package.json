@@ -26,7 +26,8 @@
     "eslint-fix": "npx eslint src --fix",
     "pre-commit": "lint-staged",
     "postinstall": "husky install",
-    "test": "jest"
+    "test": "jest",
+    "coverage": "jest --coverage"
   },
   "eslintConfig": {
     "extends": [
