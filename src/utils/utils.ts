@@ -1,23 +1,32 @@
-function formatMinutes(seconds: number) {
+export function formatMinutes(seconds: number) {
   const minutes = Math.floor(seconds / 60);
   if (minutes === 1) {
     return "1 минуту назад";
   }
+  if (minutes > 1 && minutes < 5) {
+    return `${minutes} минуты назад`;
+  }
   return `${minutes} минут назад`;
 }
 
-function formatHours(seconds: number) {
+export function formatHours(seconds: number) {
   const hours = Math.floor(seconds / 3600);
   if (hours === 1) {
     return "1 час назад";
   }
+  if (hours > 1 && hours < 5) {
+    return `${hours} часа назад`;
+  }
   return `${hours} часов назад`;
 }
 
-function formatDays(seconds: number) {
+export function formatDays(seconds: number) {
   const days = Math.floor(seconds / 86400);
   if (days === 1) {
     return "1 день назад";
+  }
+  if (days > 1 && days < 5) {
+    return `${days} дня назад`;
   }
   return `${days} дней назад`;
 }
