@@ -1,6 +1,6 @@
-# Test Project 
+# Test Project
 
-### Test project for interesting company
+### Test project
 
 ---
 ### **Author** - Frontend Developer `Viacheslav Chernogorov`.
@@ -11,7 +11,12 @@
 - Styled Components,
 - ESLint,
 - TypeScript,
-- Apolo and Graphql;
+- Apolo and Graphql,
+- Alias,
+- Webpack customization,
+- hasky,
+- Jest,
+- Docs.
 
 ---
 
@@ -31,10 +36,25 @@ After that, in the console, you need to run:
 
 - `npm i` - To install dependencies;
 
-To use:
 
-- `npm start' - The command to start the project;
-- `npm run build' - To build the project.
+
+## Scripts
+
+### Available Scripts
+
+In the project directory, you can run:
+
+- `npm start`: Runs the app in development mode.
+- `npm run build`: Builds the app for production to the `build` folder.
+- `npm test`: Launches the test runner.
+- `npm run coverage`: Launches the test runner with coverage reporting.
+- `npm run eslint`: Lints the source files using ESLint.
+- `npm run eslint-fix`: Lints and fixes the source files using ESLint.
+- `npm run docs`: Generates documentation using JSDoc.
+
+---
+
+**Note:** This project uses [react-app-rewired](https://github.com/timarney/react-app-rewired) for customizing Webpack without ejecting from Create React App. It also includes lint-staged, husky, and Jest for linting, pre-commit hooks, and testing respectively.
 
 ---
 

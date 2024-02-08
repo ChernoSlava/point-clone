@@ -1,21 +1,21 @@
-import React from 'react';
-import { Outlet, Link } from 'react-router-dom';
+import React from "react";
+import { Link, Outlet } from "react-router-dom";
 
-import { AppStyled, MainLogoStyled } from './styled';
+import { AppStyled, MainLogoStyled } from "./styled";
 
-
-export const AppLayout: React.FC<{
-  children: React.ReactElement | null;
-}> = ({ children }): JSX.Element => {
+const AppLayout: React.FC<{
+  children?: React.ReactElement | null;
+  logo: string;
+}> = ({ children, logo }): React.JSX.Element => {
   return (
-    <>
-      <AppStyled>
-        <Link to="/">
-          <MainLogoStyled src='https://point.md/static/svg/new-point-logo.svg' alt='Point logo' />
-        </Link>
-        <Outlet />
-        {children}
-      </AppStyled>
-    </>
+    <AppStyled>
+      <Link to="/">
+        <MainLogoStyled src={logo} alt="Point logo" />
+      </Link>
+      <Outlet />
+      {children}
+    </AppStyled>
   );
 };
+
+export { AppLayout };

@@ -1,13 +1,14 @@
-import { useEffect, useState } from 'react';
-import { useQuery } from '@apollo/client';
-import { ARTICLES_QUERY } from '../utils';
-import { ArticleDto } from '../types';
-import { debounce } from 'lodash';
+import { useEffect, useState } from "react";
+import { useQuery } from "@apollo/client";
+import { debounce } from "lodash";
+
+import { ArticleDto } from "../types";
+import { ARTICLES_QUERY } from "../utils";
 
 export const useArticleList = () => {
   const { loading, error, data, fetchMore } = useQuery(ARTICLES_QUERY, {
     variables: { skip: 0 },
-    fetchPolicy: 'cache-and-network',
+    fetchPolicy: "cache-and-network",
   });
 
   const [articles, setArticles] = useState<ArticleDto[]>([]);
@@ -29,9 +30,10 @@ export const useArticleList = () => {
         },
       });
       const newArticles = result.data.contents;
-      setArticles(prevArticles => [...prevArticles, ...newArticles]);
+      setArticles((prevArticles) => [...prevArticles, ...newArticles]);
     } catch (err) {
-      console.error('Error loading more articles:', err);
+      // eslint-disable-next-line no-console
+      console.error("Error loading more articles:", err);
     } finally {
       setLoadingMore(false);
     }
@@ -45,9 +47,9 @@ export const useArticleList = () => {
   }, 100);
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, [handleScroll]);
 

@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BackButton tests renders without errors 1`] = `
+<div>
+  <a
+    href="/"
+    style="text-decoration: none; color: blue;"
+  >
+    Назад
+  </a>
+</div>
+`;
+
+exports[`BackButton tests should click and go to /foo 1`] = `
+<div>
+  <a
+    href="/foo"
+    style="text-decoration: none; color: blue;"
+  >
+    Назад
+  </a>
+  <div>
+    Test
+  </div>
+</div>
+`;
+
+exports[`BackButton tests should click and go to /foo 2`] = `
+<div>
+  <a
+    href="/foo"
+    style="text-decoration: none; color: blue;"
+  >
+    Назад
+  </a>
+  <div>
+    Test foo
+  </div>
+</div>
+`;

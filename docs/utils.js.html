@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: utils.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: utils.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * Formats the time unit based on the provided value, unit, and suffixes.
+ *
+ * @param {number} value - The numerical value of the time unit.
+ * @param {string} unit - The unit of time (e.g., "minute", "hour", "day").
+ * @param {string[]} suffixes - An array of suffixes for different numerical endings.
+ * @param {string} [ending="ago"] - The default ending for the formatted time unit.
+ * @returns {string} The formatted time unit.
+ */
+function formatTimeUnit(value, unit, suffixes, ending = "ago") {
+  const lastDigit = value % 10;
+
+  if (lastDigit === 1) {
+    return `${value} ${unit}${suffixes[0]} ${ending}`;
+  }
+
+  if (lastDigit >= 2 &amp;&amp; lastDigit &lt;= 4) {
+    return `${value} ${unit}${suffixes[1]} ${ending}`;
+  }
+
+  return `${value} ${unit}${suffixes[2]} ${ending}`;
+}
+
+/**
+ * Formats the given number of seconds into minutes.
+ *
+ * @param {number} seconds - The number of seconds.
+ * @returns {string} The formatted time in minutes.
+ */
+export function formatMinutes(seconds) {
+  const minutes = Math.floor(seconds / 60);
+  return formatTimeUnit(minutes, "minute", ["", "s", "s"]);
+}
+
+/**
+ * Formats the given number of seconds into hours.
+ *
+ * @param {number} seconds - The number of seconds.
+ * @returns {string} The formatted time in hours.
+ */
+export function formatHours(seconds) {
+  const hours = Math.floor(seconds / 3600);
+  return formatTimeUnit(hours, "hour", ["", "s", "s"]);
+}
+
+/**
+ * Formats the given number of seconds into days.
+ *
+ * @param {number} seconds - The number of seconds.
+ * @returns {string} The formatted time in days.
+ */
+export function formatDays(seconds) {
+  const days = Math.floor(seconds / 86400);
+  return formatTimeUnit(days, "day", ["", "s", "s"]);
+}
+
+/**
+ * Formats the time since publication based on the provided seconds.
+ *
+ * @param {string} seconds - The time in seconds since publication.
+ * @returns {string} The formatted time since publication.
+ */
+export function formatTimeSincePublication(seconds) {
+  const now = new Date();
+  const publicationDate = new Date(parseInt(seconds, 10) * 1000);
+
+  const diffMilliseconds = now.getTime() - publicationDate.getTime();
+  const diffSeconds = Math.floor(diffMilliseconds / 1000);
+
+  if (diffSeconds &lt; 60) {
+    return "just now";
+  }
+  if (diffSeconds &lt; 3600) {
+    return formatMinutes(diffSeconds);
+  }
+  if (diffSeconds &lt; 86400) {
+    return formatHours(diffSeconds);
+  }
+  return formatDays(diffSeconds);
+}
+
+/**
+ * Generates a slug from the provided title.
+ *
+ * @param {string} title - The title to generate a slug from.
+ * @returns {string} The generated slug.
+ */
+export const generateSlug = (title) => {
+  const translitMap = {
+    а: "a",
+    б: "b",
+    в: "v",
+    г: "g",
+    д: "d",
+    е: "e",
+    ё: "yo",
+    ж: "zh",
+    з: "z",
+    и: "i",
+    й: "j",
+    к: "k",
+    л: "l",
+    м: "m",
+    н: "n",
+    о: "o",
+    п: "p",
+    р: "r",
+    с: "s",
+    т: "t",
+    у: "u",
+    ф: "f",
+    х: "h",
+    ц: "c",
+    ч: "ch",
+    ш: "sh",
+    щ: "shh",
+    ы: "y",
+    э: "e",
+    ю: "yu",
+    я: "ya",
+    " ": "-",
+  };
+
+  return title
+    .toLowerCase()
+    .replace(/[а-яё]/g, (char) => translitMap[char] || char)
+    .replace(/[^a-z0-9-]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+};
+
+/**
+ * Removes HTML entities from the provided text.
+ *
+ * @param {string} text - The text containing HTML entities.
+ * @returns {string} The text with HTML entities removed.
+ */
+export const removeHtmlEntities = (text) => {
+  return text.replace(/&amp;#34;/g, '"');
+};
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#formatDays">formatDays</a></li><li><a href="global.html#formatHours">formatHours</a></li><li><a href="global.html#formatMinutes">formatMinutes</a></li><li><a href="global.html#formatTimeSincePublication">formatTimeSincePublication</a></li><li><a href="global.html#formatTimeUnit">formatTimeUnit</a></li><li><a href="global.html#generateSlug">generateSlug</a></li><li><a href="global.html#removeHtmlEntities">removeHtmlEntities</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.11</a> on Thu Feb 08 2024 23:38:11 GMT+0200 (Восточная Европа, стандартное время)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

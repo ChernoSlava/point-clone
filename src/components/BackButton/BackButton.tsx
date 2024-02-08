@@ -1,9 +1,9 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
-const BackButton = () => {
+const BackButton: React.FC<{ to?: string }> = ({ to }) => {
   return (
-    <Link to="/" style={{ textDecoration: 'none', color: 'blue' }}>
+    <Link to={to || "/"} style={{ textDecoration: "none", color: "blue" }}>
       Назад
     </Link>
   );

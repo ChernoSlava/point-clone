@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppLayout tests renders with children 1`] = `
+<div>
+  <div
+    class="sc-beySPh bqUtuk"
+  >
+    <a
+      href="/"
+    >
+      <img
+        alt="Point logo"
+        class="sc-guDLey SRfIm"
+        src="test"
+      />
+    </a>
+    <div>
+      foo
+    </div>
+  </div>
+</div>
+`;
+
+exports[`AppLayout tests renders without children 1`] = `
+<div>
+  <div
+    class="sc-beySPh bqUtuk"
+  >
+    <a
+      href="/"
+    >
+      <img
+        alt="Point logo"
+        class="sc-guDLey SRfIm"
+        src="test"
+      />
+    </a>
+  </div>
+</div>
+`;
