@@ -1,5 +1,6 @@
 import React from "react";
 import { MemoryRouter } from "react-router-dom";
+import { mockArticlesSmall } from "@constants/MockData";
 import * as useArticleListModule from "@hooks/index";
 import { render, screen } from "@testing-library/react";
 
@@ -51,22 +52,6 @@ describe("ArticleListContainer tests", () => {
   });
 
   test("renders article list with correct data", () => {
-    const mockArticles = [
-      {
-        id: 1,
-        title: { short: "Article 1" },
-        description: { intro: "Description 1" },
-        thumbnail: "thumbnail1.jpg",
-        dates: { posted: "1630860959" },
-      },
-      {
-        id: 2,
-        title: { short: "Article 2" },
-        description: { intro: "Description 2" },
-        thumbnail: "thumbnail2.jpg",
-        dates: { posted: "1630860959" },
-      },
-    ];
     const mockUseArticleList = jest.fn();
     jest
       .spyOn(useArticleListModule, "useArticleList")
@@ -75,7 +60,7 @@ describe("ArticleListContainer tests", () => {
     mockUseArticleList.mockReturnValue({
       loading: false,
       error: undefined,
-      articles: mockArticles,
+      articles: mockArticlesSmall,
       loadingMore: false,
     });
 
@@ -110,6 +95,30 @@ describe("ArticleListContainer tests", () => {
     expect(screen.getByText("Description 2")).toBeInTheDocument();
 
     expect(container).toMatchSnapshot();
+    unmount();
+  });
+
+  test("renders loadingMore", () => {
+    const mockUseArticleList = jest.fn();
+    jest
+      .spyOn(useArticleListModule, "useArticleList")
+      .mockImplementation(mockUseArticleList);
+
+    mockUseArticleList.mockReturnValue({
+      loading: false,
+      error: undefined,
+      articles: mockArticlesSmall,
+      loadingMore: true,
+    });
+
+    const { unmount } = render(
+      <MemoryRouter>
+        <ArticleListContainer />
+      </MemoryRouter>
+    );
+
+    const loadingMoreElement = screen.getByText("Loading more...");
+    expect(loadingMoreElement).toBeInTheDocument();
     unmount();
   });
 });

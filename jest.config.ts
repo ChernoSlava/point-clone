@@ -32,6 +32,8 @@ const config = {
     "^@containers(.*)$": "<rootDir>/src/containers$1",
     "^@constants(.*)$": "<rootDir>/src/constants$1",
   },
+
+  coveragePathIgnorePatterns: ["/node_modules/", "index.ts"],
   // Добавление путей к глобальным setup-файлам
   // globalSetup: './jest.globalSetup.js',
 

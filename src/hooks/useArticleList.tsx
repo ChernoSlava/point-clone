@@ -53,5 +53,5 @@ export const useArticleList = () => {
     };
   }, [handleScroll]);
 
-  return { loading, error, articles, loadingMore };
+  return { loading, error, articles, loadingMore, loadMore };
 };

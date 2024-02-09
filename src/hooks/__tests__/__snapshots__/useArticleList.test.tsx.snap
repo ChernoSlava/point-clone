@@ -1,0 +1,142 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`useArticleList should fetch article list 1`] = `
+{
+  "articles": [
+    {
+      "dates": {
+        "posted": "1630860959",
+      },
+      "description": {
+        "intro": "Description 1",
+      },
+      "id": 1,
+      "thumbnail": "thumbnail1.jpg",
+      "title": {
+        "short": "Article 1",
+      },
+    },
+    {
+      "dates": {
+        "posted": "1630860959",
+      },
+      "description": {
+        "intro": "Description 2",
+      },
+      "id": 2,
+      "thumbnail": "thumbnail2.jpg",
+      "title": {
+        "short": "Article 2",
+      },
+    },
+    {
+      "dates": {
+        "posted": "1630860959",
+      },
+      "description": {
+        "intro": "Description 3",
+      },
+      "id": 3,
+      "thumbnail": "thumbnail3.jpg",
+      "title": {
+        "short": "Article 3",
+      },
+    },
+    {
+      "dates": {
+        "posted": "1630860959",
+      },
+      "description": {
+        "intro": "Description 4",
+      },
+      "id": 4,
+      "thumbnail": "thumbnail4.jpg",
+      "title": {
+        "short": "Article 4",
+      },
+    },
+    {
+      "dates": {
+        "posted": "1630860959",
+      },
+      "description": {
+        "intro": "Description 5",
+      },
+      "id": 5,
+      "thumbnail": "thumbnail5.jpg",
+      "title": {
+        "short": "Article 5",
+      },
+    },
+    {
+      "dates": {
+        "posted": "1630860959",
+      },
+      "description": {
+        "intro": "Description 6",
+      },
+      "id": 6,
+      "thumbnail": "thumbnail6.jpg",
+      "title": {
+        "short": "Article 6",
+      },
+    },
+    {
+      "dates": {
+        "posted": "1630860959",
+      },
+      "description": {
+        "intro": "Description 7",
+      },
+      "id": 7,
+      "thumbnail": "thumbnail7.jpg",
+      "title": {
+        "short": "Article 7",
+      },
+    },
+    {
+      "dates": {
+        "posted": "1630860959",
+      },
+      "description": {
+        "intro": "Description 8",
+      },
+      "id": 8,
+      "thumbnail": "thumbnail8.jpg",
+      "title": {
+        "short": "Article 8",
+      },
+    },
+    {
+      "dates": {
+        "posted": "1630860959",
+      },
+      "description": {
+        "intro": "Description 9",
+      },
+      "id": 9,
+      "thumbnail": "thumbnail9.jpg",
+      "title": {
+        "short": "Article 9",
+      },
+    },
+    {
+      "dates": {
+        "posted": "1630860959",
+      },
+      "description": {
+        "intro": "Description 10",
+      },
+      "id": 10,
+      "thumbnail": "thumbnail10.jpg",
+      "title": {
+        "short": "Article 10",
+      },
+    },
+  ],
+  "error": undefined,
+  "loadMore": [Function],
+  "loading": false,
+  "loadingMore": false,
+}
+`;
