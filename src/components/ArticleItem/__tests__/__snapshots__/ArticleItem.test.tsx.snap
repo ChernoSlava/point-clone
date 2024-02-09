@@ -6,12 +6,11 @@ exports[`ArticleItem tests renders with correct title, image, and description 1`
     class="sc-beySPh jOqDaV"
   >
     <div
-      class="sc-guDLey cdWRpq"
+      class="sc-guDLey dSXgup"
     >
       <img
         alt="Cartoon"
-        class="sc-dmyCSP gfsvpd"
-        src="test-thumbnail.jpg"
+        class="sc-dmyCSP gctnZZ"
       />
     </div>
     <div

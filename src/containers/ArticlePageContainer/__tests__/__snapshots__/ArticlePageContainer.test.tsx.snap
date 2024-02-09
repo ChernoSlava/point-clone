@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArticlePageContainer tests renders ArticlePage with correct props 1`] = `
+<div>
+  <div
+    class="sc-kFCroH cdOwRX"
+  >
+    <h2
+      class="sc-irLvIq kpUjiu"
+    >
+      Test Title
+    </h2>
+    <p
+      class="sc-csKJxZ fyRViO"
+    >
+      Test Description
+    </p>
+    <img
+      alt="Big ico"
+      class="sc-eTNRI ivJwRw"
+      src="test-image.jpg"
+    />
+    <p
+      class="sc-brSamD kRpsRk"
+    >
+      Шикарные новости для вас :D
+    </p>
+    <a
+      href="/"
+      style="text-decoration: none; color: blue;"
+    >
+      Назад
+    </a>
+  </div>
+</div>
+`;

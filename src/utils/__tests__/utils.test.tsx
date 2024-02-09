@@ -55,6 +55,10 @@ describe("replaceSymbols", () => {
     const result = removeHtmlEntities(title);
     expect(result).toEqual('This is a "test" title');
   });
+  it("should return empty string", () => {
+    const result = removeHtmlEntities("");
+    expect(result).toBe("");
+  });
 });
 
 describe("formate Date", () => {

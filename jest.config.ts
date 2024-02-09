@@ -25,6 +25,15 @@ const config = {
   // Добавление путей к файлам с настройками перед запуском тестов
   setupFilesAfterEnv: ["./setupTests.ts"],
 
+  moduleNameMapper: {
+    "^@components(.*)$": "<rootDir>/src/components$1",
+    "^@hooks(.*)$": "<rootDir>/src/hooks$1",
+    "^@utils(.*)$": "<rootDir>/src/utils$1",
+    "^@containers(.*)$": "<rootDir>/src/containers$1",
+    "^@constants(.*)$": "<rootDir>/src/constants$1",
+  },
+
+  coveragePathIgnorePatterns: ["/node_modules/", "index.ts"],
   // Добавление путей к глобальным setup-файлам
   // globalSetup: './jest.globalSetup.js',
 

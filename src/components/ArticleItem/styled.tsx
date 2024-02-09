@@ -13,6 +13,7 @@ const ArticleItemStyled = styled.li`
 const ArticleImgBoxStyled = styled.div`
   width: 240px;
   min-width: 240px;
+  max-height: 125px;
 `;
 
 const ArticleImgStyled = styled.img`
@@ -20,6 +21,7 @@ const ArticleImgStyled = styled.img`
   border-radius: 4px;
   overflow: hidden;
   pointer-events: none;
+  height: 100%;
 `;
 
 const ArticleDescriptionBoxStyled = styled.div`

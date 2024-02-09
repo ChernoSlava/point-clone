@@ -140,5 +140,8 @@ export const generateSlug = (title: string) => {
  * @returns {string} The text with HTML entities removed.
  */
 export const removeHtmlEntities = (text: string) => {
+  if (!text || text.trim() === "") {
+    return text;
+  }
   return text.replace(/&#34;/g, '"');
 };
