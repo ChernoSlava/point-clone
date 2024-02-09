@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ArticleList tests renders article list correctly 1`] = `
+exports[`ArticleListContainer tests renders article list with correct data 1`] = `
 <div>
   <div
     class="sc-fsYfdN fGPEJW"
@@ -14,7 +14,7 @@ exports[`ArticleList tests renders article list correctly 1`] = `
       class="sc-jsEeTM jidTqx"
     >
       <a
-        href="/article-1"
+        href="/article/article-1"
       >
         <li
           class="sc-beySPh jOqDaV"
@@ -25,7 +25,7 @@ exports[`ArticleList tests renders article list correctly 1`] = `
             <img
               alt="Cartoon"
               class="sc-dmyCSP gctnZZ"
-              src="article-1.jpg"
+              src="https://i.simpalsmedia.com/point.md/news/900x900/thumbnail1.jpg"
             />
           </div>
           <div
@@ -39,7 +39,7 @@ exports[`ArticleList tests renders article list correctly 1`] = `
             <p
               class="sc-jTQCzO gawhwJ"
             >
-              Description for Article 1
+              Description 1
             </p>
             <p
               class="sc-iBdnpw giGobE"
@@ -47,15 +47,15 @@ exports[`ArticleList tests renders article list correctly 1`] = `
               <img
                 alt="icon"
                 class="sc-gLLuof gNHDaF"
-                src="article-1.jpg"
+                src="https://i.simpalsmedia.com/point.md/news/370x194/thumbnail1.jpg"
               />
-              2 дня назад
+              886 дней назад
             </p>
           </div>
         </li>
       </a>
       <a
-        href="/article-2"
+        href="/article/article-2"
       >
         <li
           class="sc-beySPh jOqDaV"
@@ -66,7 +66,7 @@ exports[`ArticleList tests renders article list correctly 1`] = `
             <img
               alt="Cartoon"
               class="sc-dmyCSP gctnZZ"
-              src="article-2.jpg"
+              src="https://i.simpalsmedia.com/point.md/news/900x900/thumbnail2.jpg"
             />
           </div>
           <div
@@ -80,7 +80,7 @@ exports[`ArticleList tests renders article list correctly 1`] = `
             <p
               class="sc-jTQCzO gawhwJ"
             >
-              Description for Article 2
+              Description 2
             </p>
             <p
               class="sc-iBdnpw giGobE"
@@ -88,9 +88,9 @@ exports[`ArticleList tests renders article list correctly 1`] = `
               <img
                 alt="icon"
                 class="sc-gLLuof gNHDaF"
-                src="article-2.jpg"
+                src="https://i.simpalsmedia.com/point.md/news/370x194/thumbnail2.jpg"
               />
-              8 дней назад
+              886 дней назад
             </p>
           </div>
         </li>

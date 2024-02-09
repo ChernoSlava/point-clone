@@ -26,11 +26,12 @@ const ArticleItem: React.FC<IArticleItemProps> = ({
   title,
   description,
   date,
+  image,
 }) => {
   return (
     <ArticleItemStyled key={id}>
       <ArticleImgBoxStyled>
-        <ArticleImgStyled src={thumbnail} alt="Cartoon" />
+        <ArticleImgStyled src={image} alt="Cartoon" />
       </ArticleImgBoxStyled>
       <ArticleDescriptionBoxStyled>
         <ArticleTitleStyled>{title}</ArticleTitleStyled>
